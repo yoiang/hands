@@ -27,10 +27,13 @@ function App() {
   const [handIndex, setHandIndex] = useState(Math.floor(Math.random()*handsData.length))
   const [hand, setHand] = useState(handsData[handIndex])
 
-  const printFinger = (width, height, position, altPosition, fingerIndex) => {
-    const imageName = `Img${position}${fingerIndex}`
-    const image = `images/${position}_${fingerIndex}.jpg`
-    const altImage = `images/${altPosition}_${fingerIndex}.jpg`
+  const fingerImage = (width, height, hand, fingerIndex) => {
+    const finger = hand.fingers[fingerIndex]
+    const { regular, alternative } = finger
+
+    const imageName = `Img${regular}${fingerIndex}`
+    const image = `images/${regular}_${fingerIndex}.jpg`
+    const altImage = `images/${alternative}_${fingerIndex}.jpg`
 
     const onMouseEnter = () => {
       swap(imageName, altImage)
@@ -42,8 +45,8 @@ function App() {
       const newHand = cloneDeep(hand)
       newHand.name = "-"
       newHand.description = ""
-      newHand.fingers[fingerIndex].regular = altPosition
-      newHand.fingers[fingerIndex].alternative = position
+      newHand.fingers[fingerIndex].regular = alternative
+      newHand.fingers[fingerIndex].alternative = regular
 
       const matchIndex = handsData.findIndex((test) => {
         return compareFingers(test.fingers, newHand.fingers)       
@@ -70,12 +73,6 @@ function App() {
     )
   }
 
-  const printFingerNew = (width, height, hand, fingerIndex) => {
-    const finger = hand.fingers[fingerIndex]
-    const { regular, alternative } = finger
-    return printFinger(width, height, regular, alternative, fingerIndex)
-  }
-
   return (
     <main>
       <table className="hand">
@@ -88,13 +85,13 @@ function App() {
               }} alt="Spacer" />
             </td>
             <td rowSpan="2" height="219">
-              {printFingerNew(59, 219, hand, "2")}
+              {fingerImage(59, 219, hand, "2")}
             </td>
             <td rowSpan="2" height="219">
-              {printFingerNew(57, 219, hand, "3")}
+              {fingerImage(57, 219, hand, "3")}
             </td>
             <td rowSpan="2" height="219">
-              {printFingerNew(81, 219, hand, "4")}
+              {fingerImage(81, 219, hand, "4")}
             </td>
           </tr>
           <tr height="189">
@@ -102,12 +99,12 @@ function App() {
               <img src='/images/s2.jpg' width="98" height="189" alt="Spacer" />
             </td>
             <td colSpan="2" height="189">
-              {printFingerNew(69, 189, hand, "1")}
+              {fingerImage(69, 189, hand, "1")}
             </td>
           </tr>
           <tr>
             <td colSpan="2">
-              {printFingerNew(121, 166, hand, "0")}
+              {fingerImage(121, 166, hand, "0")}
             </td>
             <td colSpan="4" rowSpan="2">
               <img src="images/palm2.jpg" width="243" height="222" alt="Palm 2" />
