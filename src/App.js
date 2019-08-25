@@ -64,8 +64,10 @@ function App() {
       <img 
         name={imageName} 
         src={image} 
-        width={width} 
-        height={height} 
+        style={{
+          width, 
+          height
+        }}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
         onClick={onClick}
@@ -75,56 +77,73 @@ function App() {
 
   return (
     <main>
-      <table className="hand">
-        <tbody>
-          <tr style={{ height: 30 }}>
-            <td colSpan="3" style={{ height: 30 }}>
-              <img src='/images/s1.jpg' style={{
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: "98px 23px 46px 59px 57px 81px",
+        gridTemplateRows: "30px 189px 166px 56px",
+        gridGap: "0 0",
+        justifyContent: "center",
+        // justifyItems: "stretch",
+        // alignItems: "stretch"
+      }}>
+        <div style={{
+          gridColumn: "1 / span 3",
+          gridRow: "1 / span 1"
+        }}>
+          <img src='/images/s1.jpg' style={{
                 width: 167,
                 height: 30
               }} alt="Spacer" />
-            </td>
-            <td rowSpan="2" height="219">
-              {fingerImage(59, 219, hand, "2")}
-            </td>
-            <td rowSpan="2" height="219">
-              {fingerImage(57, 219, hand, "3")}
-            </td>
-            <td rowSpan="2" height="219">
-              {fingerImage(81, 219, hand, "4")}
-            </td>
-          </tr>
-          <tr height="189">
-            <td height="189">
-              <img src='/images/s2.jpg' width="98" height="189" alt="Spacer" />
-            </td>
-            <td colSpan="2" height="189">
-              {fingerImage(69, 189, hand, "1")}
-            </td>
-          </tr>
-          <tr>
-            <td colSpan="2">
-              {fingerImage(121, 166, hand, "0")}
-            </td>
-            <td colSpan="4" rowSpan="2">
-              <img src="images/palm2.jpg" width="243" height="222" alt="Palm 2" />
-            </td>
-          </tr>
-          <tr>
-            <td colSpan="2">
-              <img src="images/palm1.jpg" width="121" height="56" alt="Palm 1" />
-            </td>
-          </tr>
-          <tr>
-            <td><img src="images/spacer.gif" width="98" height="1" alt="spacer" /></td>
-            <td><img src="images/spacer.gif" width="23" height="1" alt="spacer" /></td>
-            <td><img src="images/spacer.gif" width="46" height="1" alt="spacer" /></td>
-            <td><img src="images/spacer.gif" width="59" height="1" alt="spacer" /></td>
-            <td><img src="images/spacer.gif" width="57" height="1" alt="spacer" /></td>
-            <td><img src="images/spacer.gif" width="81" height="1" alt="spacer" /></td>
-          </tr>
-        </tbody>
-      </table>
+        </div>
+        <div style={{
+          gridColumn: "4 / span 1",
+          gridRow: "1 / span 2"
+        }}>
+          {fingerImage(59, 219, hand, "2")}
+        </div>
+        <div style={{
+          gridColumn: "5 / span 1",
+          gridRow: "1 / span 2"
+        }}>
+          {fingerImage(57, 219, hand, "3")}
+        </div>
+        <div style={{
+          gridColumn: "6 / span 1",
+          gridRow: "1 / span 2"
+        }}>
+          {fingerImage(81, 219, hand, "4")}
+        </div>
+        <div style={{
+          gridColumn: "1 / span 1",
+          gridRow: "2 / span 1"
+        }}>
+          <img src='/images/s2.jpg' width="98" height="189" alt="Spacer" />
+        </div>
+        <div style={{
+          gridColumn: "2 / span 2",
+          gridRow: "2 / span 1"
+        }}>
+          {fingerImage(69, 189, hand, "1")}
+        </div>
+        <div style={{
+          gridColumn: "1 / span 2",
+          gridRow: "3 / span 1"
+        }}>
+          {fingerImage(121, 166, hand, "0")}
+        </div>
+        <div style={{
+          gridColumn: "3 / span 4",
+          gridRow: "3 / span 2"
+        }}>
+          <img src="images/palm2.jpg" width="243" height="222" alt="Palm 2" />
+        </div>
+        <div style={{
+          gridColumn: "1 / span 2",
+          gridRow: "4 / span 1"
+        }}>
+          <img src="images/palm1.jpg" width="121" height="56" alt="Palm 1" />
+        </div>
+      </div>
       <div className="name">
         {hand.name}
       </div>
