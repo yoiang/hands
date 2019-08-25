@@ -1,0 +1,54 @@
+body {
+    background-color: black;
+    color: white;
+
+    margin-top: 5px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.title {
+  padding: 20px;
+}
+div.description {
+  padding: 20px;
+}
+table.hand {
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+
+    border-spacing: 0px;
+
+    width: 364px;
+}
+tr {
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+td {
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+  }
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    color: #eeeeee;
+}
+table > img {
+  border: 0px solid black;
+}
