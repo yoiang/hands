@@ -1,95 +1,205 @@
 [
     {
-      "PositionFinger0": 1,
-      "PositionFinger1": 1,
-      "PositionFinger2": 1,
-      "PositionFinger3": 1,
-      "PositionFinger4": 1,
-      "AltPositionFinger0": 0,
-      "AltPositionFinger1": 3,
-      "AltPositionFinger2": 3,
-      "AltPositionFinger3": 3,
-      "AltPositionFinger4": 3,
-      "Name": "Hand Wave",
-      "Description": "Used to greet others"
+
+      "name": "Hand Wave",
+      "description": "Used to greet others",
+      "fingers": {
+        "0": {
+          "regular": 1,
+          "alternative": 0
+        },
+        "1": {
+          "regular": 1,
+          "alternative": 3
+        },
+        "2": {
+          "regular": 1,
+          "alternative": 3
+        },
+        "3": {
+          "regular": 1,
+          "alternative": 3
+        },
+        "4": {
+          "regular": 1,
+          "alternative": 3
+        }
+      }
     },
     {
-      "PositionFinger0": 0,
-      "PositionFinger1": 3,
-      "PositionFinger2": 1,
-      "PositionFinger3": 3,
-      "PositionFinger4": 3,
-      "AltPositionFinger0": 1,
-      "AltPositionFinger1": 1,
-      "AltPositionFinger2": 3,
-      "AltPositionFinger3": 1,
-      "AltPositionFinger4": 1,
-      "Name": "The Finger",
-      "Description": "Translates directly to \"Fuck you\""
+      "name": "The Finger",
+      "description": "Translates directly to \"Fuck you\"",
+      "fingers": {
+        "0": {
+          "regular": 0,
+          "alternative": 1
+        },
+        "1": {
+          "regular": 3,
+          "alternative": 1
+        },
+        "2": {
+          "regular": 1,
+          "alternative": 3
+        },
+        "3": {
+          "regular": 3,
+          "alternative": 1
+        },
+        "4": {
+          "regular": 3,
+          "alternative": 1
+        }
+      }
     },
     {
-      "PositionFinger0": 0,
-      "PositionFinger1": 1,
-      "PositionFinger2": 1,
-      "PositionFinger3": 3,
-      "PositionFinger4": 3,
-      "AltPositionFinger0": 1,
-      "AltPositionFinger1": 3,
-      "AltPositionFinger2": 3,
-      "AltPositionFinger3": 1,
-      "AltPositionFinger4": 1,
-      "Name": "Peace Sign"
+      "name": "Peace Sign",
+      "fingers": {
+        "0": {
+          "regular": 0,
+          "alternative": 1
+        },
+        "1": {
+          "regular": 1,
+          "alternative": 3
+        },
+        "2": {
+          "regular": 1,
+          "alternative": 3
+        },
+        "3": {
+          "regular": 3,
+          "alternative": 1
+        },
+        "4": {
+          "regular": 3,
+          "alternative": 1
+        }
+      }
     },
     {
-      "PositionFinger0": 1,
-      "PositionFinger1": 3,
-      "PositionFinger2": 3,
-      "PositionFinger3": 3,
-      "PositionFinger4": 1,
-      "AltPositionFinger0": 0,
-      "AltPositionFinger1": 1,
-      "AltPositionFinger2": 1,
-      "AltPositionFinger3": 1,
-      "AltPositionFinger4": 3,
-      "Name": "Gnarly Sign"
+      "name": "Gnarly Sign",
+      "fingers": {
+        "0": {
+          "regular": 1,
+          "alternative": 0
+        },
+        "1": {
+          "regular": 3,
+          "alternative": 1
+        },
+        "2": {
+          "regular": 3,
+          "alternative": 1
+        },
+        "3": {
+          "regular": 3,
+          "alternative": 1
+        },
+        "4": {
+          "regular": 1,
+          "alternative": 3
+        }
+      }
     },
     {
-      "PositionFinger0": 0,
-      "PositionFinger1": 1,
-      "PositionFinger2": 3,
-      "PositionFinger3": 3,
-      "PositionFinger4": 3,
-      "AltPositionFinger0": 1,
-      "AltPositionFinger1": 3,
-      "AltPositionFinger2": 1,
-      "AltPositionFinger3": 1,
-      "AltPositionFinger4": 1,
-      "Name": "Number 1"
+      "name": "Rock or The Horns",
+      "fingers": {
+        "0": {
+          "regular": 0,
+          "alternative": 1
+        },
+        "1": {
+          "regular": 1,
+          "alternative": 3
+        },
+        "2": {
+          "regular": 3,
+          "alternative": 1
+        },
+        "3": {
+          "regular": 3,
+          "alternative": 1
+        },
+        "4": {
+          "regular": 1,
+          "alternative": 3
+        }
+      }
     },
     {
-      "PositionFinger0": 0,
-      "PositionFinger1": 3,
-      "PositionFinger2": 3,
-      "PositionFinger3": 1,
-      "PositionFinger4": 3,
-      "AltPositionFinger0": 1,
-      "AltPositionFinger1": 1,
-      "AltPositionFinger2": 1,
-      "AltPositionFinger3": 3,
-      "AltPositionFinger4": 1,
-      "Name": "\"The Finger\" Fake Out"
+      "name": "Number 1",
+      "fingers": {
+        "0": {
+          "regular": 0,
+          "alternative": 1
+        },
+        "1": {
+          "regular": 1,
+          "alternative": 3
+        },
+        "2": {
+          "regular": 3,
+          "alternative": 1
+        },
+        "3": {
+          "regular": 3,
+          "alternative": 1
+        },
+        "4": {
+          "regular": 3,
+          "alternative": 1
+        }
+      }
     },
     {
-      "PositionFinger0": 0,
-      "PositionFinger1": 3,
-      "PositionFinger2": 3,
-      "PositionFinger3": 3,
-      "PositionFinger4": 3,
-      "AltPositionFinger0": 1,
-      "AltPositionFinger1": 1,
-      "AltPositionFinger2": 1,
-      "AltPositionFinger3": 1,
-      "AltPositionFinger4": 1,
-      "Name": "My Fist, Your Face"
+      "name": "\"The Finger\" Fake Out",
+      "fingers": {
+        "0": {
+          "regular": 0,
+          "alternative": 1
+        },
+        "1": {
+          "regular": 3,
+          "alternative": 1
+        },
+        "2": {
+          "regular": 3,
+          "alternative": 1
+        },
+        "3": {
+          "regular": 1,
+          "alternative": 3
+        },
+        "4": {
+          "regular": 3,
+          "alternative": 1
+        }
+      }
+    },
+    {
+      "name": "My Fist, Your Face",
+      "fingers": {
+        "0": {
+          "regular": 0,
+          "alternative": 1
+        },
+        "1": {
+          "regular": 3,
+          "alternative": 1
+        },
+        "2": {
+          "regular": 3,
+          "alternative": 1
+        },
+        "3": {
+          "regular": 3,
+          "alternative": 1
+        },
+        "4": {
+          "regular": 3,
+          "alternative": 1
+        }
+      }
     }
   ]

@@ -2,20 +2,35 @@ import React from 'react';
 import { useState } from 'react';
 import './App.css';
 import handsData from './hands.json'
+const cloneDeep = require('lodash/cloneDeep')
 
-function swap(switchimage, imagename) {
+const swap = (switchimage, imagename) => {
   document.images[switchimage].src = imagename
   return true
+}
+
+const compareFingers = (left, right) => {
+  return Object.keys(left).reduce((accumulated, currentFingerKey) => {
+    if (accumulated === false) {
+      return false
+    }          
+
+    const testFinger = left[currentFingerKey]
+    const newFinger = right[currentFingerKey]
+
+    return testFinger.position === newFinger.position &&
+    testFinger.alternative === newFinger.alternative
+  }, true)  
 }
 
 function App() {
   const [handIndex, setHandIndex] = useState(Math.floor(Math.random()*handsData.length))
   const [hand, setHand] = useState(handsData[handIndex])
 
-  const printFinger = (width, height, position, altPosition, finger, link) => {
-    const imageName = `Img${position}${finger}`
-    const image = `images/${position}_${finger}.jpg`
-    const altImage = `images/${altPosition}_${finger}.jpg`
+  const printFinger = (width, height, position, altPosition, fingerIndex) => {
+    const imageName = `Img${position}${fingerIndex}`
+    const image = `images/${position}_${fingerIndex}.jpg`
+    const altImage = `images/${altPosition}_${fingerIndex}.jpg`
 
     const onMouseEnter = () => {
       swap(imageName, altImage)
@@ -24,17 +39,14 @@ function App() {
       swap(imageName, image)
     }
     const onClick = () => {
-      const newHand = { ...hand }
-      newHand.Name = "-"
-      newHand.Description = ""
-      newHand[`PositionFinger${finger}`] = altPosition
-      newHand[`AltPositionFinger${finger}`] = position
+      const newHand = cloneDeep(hand)
+      newHand.name = "-"
+      newHand.description = ""
+      newHand.fingers[fingerIndex].regular = altPosition
+      newHand.fingers[fingerIndex].alternative = position
+
       const matchIndex = handsData.findIndex((test) => {
-        return test[`PositionFinger0`] === newHand[`PositionFinger0`] &&
-          test[`PositionFinger1`] === newHand[`PositionFinger1`] &&
-          test[`PositionFinger2`] === newHand[`PositionFinger2`] &&
-          test[`PositionFinger3`] === newHand[`PositionFinger3`] &&
-          test[`PositionFinger4`] === newHand[`PositionFinger4`] 
+        return compareFingers(test.fingers, newHand.fingers)       
       })
       if (matchIndex !== -1) {
         setHandIndex(matchIndex)
@@ -58,6 +70,12 @@ function App() {
     )
   }
 
+  const printFingerNew = (width, height, hand, fingerIndex) => {
+    const finger = hand.fingers[fingerIndex]
+    const { regular, alternative } = finger
+    return printFinger(width, height, regular, alternative, fingerIndex)
+  }
+
   return (
     <main>
       <table className="hand">
@@ -69,12 +87,14 @@ function App() {
                 height: 30
               }} alt="Spacer" />
             </td>
-            <td rowSpan="2" height="219"> {printFinger(59, 219, hand["PositionFinger2"], hand["AltPositionFinger2"], "2", hand["LinkFinger2"])}</td>
             <td rowSpan="2" height="219">
-              {printFinger(57, 219, hand["PositionFinger3"], hand["AltPositionFinger3"], "3", hand["LinkFinger3"])}
+              {printFingerNew(59, 219, hand, "2")}
             </td>
             <td rowSpan="2" height="219">
-              {printFinger(81, 219, hand["PositionFinger4"], hand["AltPositionFinger4"], "4", hand["LinkFinger4"])}
+              {printFingerNew(57, 219, hand, "3")}
+            </td>
+            <td rowSpan="2" height="219">
+              {printFingerNew(81, 219, hand, "4")}
             </td>
           </tr>
           <tr height="189">
@@ -82,12 +102,12 @@ function App() {
               <img src='/images/s2.jpg' width="98" height="189" alt="Spacer" />
             </td>
             <td colSpan="2" height="189">
-              {printFinger(69, 189, hand["PositionFinger1"], hand["AltPositionFinger1"], "1", hand["LinkFinger1"])}
+              {printFingerNew(69, 189, hand, "1")}
             </td>
           </tr>
           <tr>
             <td colSpan="2">
-              {printFinger(121, 166, hand["PositionFinger0"], hand["AltPositionFinger0"], "0", hand["LinkFinger0"])}
+              {printFingerNew(121, 166, hand, "0")}
             </td>
             <td colSpan="4" rowSpan="2">
               <img src="images/palm2.jpg" width="243" height="222" alt="Palm 2" />
@@ -108,11 +128,11 @@ function App() {
           </tr>
         </tbody>
       </table>
-      <div className="title">
-        {hand.Name}
+      <div className="name">
+        {hand.name}
       </div>
       <div className="description">
-        {hand.Description}
+        {hand.description}
       </div>
     </main>
   );
