@@ -1,76 +1,78 @@
 html {
   height: 100%;
 }
-body {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
 
-    height: 100%;
-    margin: 0;
-    padding: 0;
+body {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .shadowed-frame_01 {
-  -webkit-filter: drop-shadow(3px 3px 4px rgba(0,0,0,0.5));
+  -webkit-filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.5));
   filter: url(#drop-shadow-frame_01);
   -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
   filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
 }
 
 .shadowed-frame_02 {
-  -webkit-filter: drop-shadow(3px 3px 4px rgba(0,0,0,0.5));
+  -webkit-filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.5));
   filter: url(#drop-shadow-frame_02);
   -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
   filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
 }
 
 .shadowed-frame_03 {
-  -webkit-filter: drop-shadow(3px 3px 4px rgba(0,0,0,0.5));
+  -webkit-filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.5));
   filter: url(#drop-shadow-frame_03);
   -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
   filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
 }
 
 .shadowed-frame_04 {
-  -webkit-filter: drop-shadow(3px 3px 4px rgba(0,0,0,0.5));
+  -webkit-filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.5));
   filter: url(#drop-shadow-frame_04);
   -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
   filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
 }
 
 .shadowed-frame_05 {
-  -webkit-filter: drop-shadow(3px 3px 4px rgba(0,0,0,0.5));
+  -webkit-filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.5));
   filter: url(#drop-shadow-frame_05);
   -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
   filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
 }
 
 .shadowed-frame_06 {
-  -webkit-filter: drop-shadow(3px 3px 4px rgba(0,0,0,0.5));
+  -webkit-filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.5));
   filter: url(#drop-shadow-frame_06);
   -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
   filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
 }
 
 .shadowed-frame_07 {
-  -webkit-filter: drop-shadow(3px 3px 4px rgba(0,0,0,0.5));
+  -webkit-filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.5));
   filter: url(#drop-shadow-frame_07);
   -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
   filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
 }
 
 .shadowed-frame_08 {
-  -webkit-filter: drop-shadow(3px 3px 4px rgba(0,0,0,0.5));
+  -webkit-filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.5));
   filter: url(#drop-shadow-frame_08);
   -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
   filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
 }
+
 main {
   height: 100%;
 
   background-color: #f5f5f5;
-  background: url('/images/background.jpg');
+  background: url('../public/images/background.jpg');
   background-size: 100px 100px;
   background-repeat: repeat;
 
@@ -95,51 +97,60 @@ svg.frame-shadow {
 div#root {
   height: 100%;
 }
+
 div.information {
   margin: 20px;
   background: #fffff3;
 
-  -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.5));
+  -webkit-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
 
   border-radius: 2px;
 }
+
 div.description {
   padding: 15px;
   padding-top: 25px;
   color: #424242;
   background: #f3f5e4;
 }
+
 div.name {
   padding: 15px;
   padding-bottom: 25px;
   color: black;
   font-weight: 700;
 }
+
 table.hand {
-    border: 0px;
-    margin: 0px;
-    padding: 0px;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
 
-    border-spacing: 0px;
+  border-spacing: 0px;
 
-    width: 364px;
+  width: 364px;
 }
+
 tr {
   border: 0px;
   margin: 0px;
   padding: 0px;
 }
+
 td {
-    border: 0px;
-    margin: 0px;
-    padding: 0px;
-  }
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
 a:link {
-    text-decoration: none;
+  text-decoration: none;
 }
+
 a:visited {
-    color: #eeeeee;
+  color: #eeeeee;
 }
-table > img {
+
+table>img {
   border: 0px solid black;
 }
