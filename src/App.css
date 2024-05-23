@@ -114,6 +114,11 @@ div.description {
   background: #f3f5e4;
 }
 
+div.no-description-spacer {
+  padding: 15px;
+  padding-top: 25px;
+}
+
 div.name {
   padding: 15px;
   padding-bottom: 25px;
